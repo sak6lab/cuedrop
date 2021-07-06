@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 export default function Training() {
+    // only generate and render shapes on client side
     const [shouldRenderShapes, setShouldRenderShapes] = useState(false)
     useEffect(() => {
       setShouldRenderShapes(true)
@@ -9,7 +10,7 @@ export default function Training() {
     if (shouldRenderShapes) {
       randomShapes = getRandomShapes()
     }
-    
+
     return (
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
         <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
