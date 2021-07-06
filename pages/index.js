@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="backdrop-filter backdrop-blur px-2 py-1 mt-4 cursor-pointer bg-white bg-opacity-20 hover:bg-opacity-40 rounded shadow-glass">Start</div>
+        <Link href="/training"><div className="backdrop-filter backdrop-blur px-2 py-1 mt-4 cursor-pointer bg-white bg-opacity-20 hover:bg-opacity-40 rounded shadow-glass"><a>Start</a></div></Link>
       </main>
     </div>
   )
