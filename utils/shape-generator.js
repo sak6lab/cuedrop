@@ -39,16 +39,16 @@ export function getRandomShapes() {
     const randomShapes = []
     for (let i = 0; i < 3; i++) {
       let num = Math.floor(Math.random()*possibleUniqueShapes.length)
-      randomShapes.push(generateShape(...possibleUniqueShapes[num]))
+      randomShapes.push({shape:possibleUniqueShapes[num][0],color: possibleUniqueShapes[num][1]})
       possibleUniqueShapes.splice(num,1)
     }
     return randomShapes
 }
 
-export function getRandomShape() {
+export function getRandomCue() {
   const colorIndex = Math.floor(Math.random()*colorArray.length)
   const shapeIndex = Math.floor(Math.random()*shapeArray.length)
   const shape = shapeArray[shapeIndex]
   const color = colorArray[colorIndex]
-  return [generateShape(shape,color),shape,color]
+  return {shape:shape,color: color}
 }

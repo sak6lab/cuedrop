@@ -12,6 +12,8 @@ export default function Training() {
     setStep(1)
   }
   const onCueClick = (shape,color) => {
+    console.log({shape:shape,color:color})
+    console.log({cueshape:cue.shape,cuecolor:cue.color})
     if (cue.shape === shape && cue.color === color) {
       setStep(2)
     }
