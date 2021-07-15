@@ -44,8 +44,14 @@ export function getRandomShapes() {
     }
     return randomShapes
 }
-
-export function getRandomCue() {
+// probability: 0 <= p <= 1 : prelim probability to return userCue or generate a
+// a random cue that may also be the user's cue
+export function getRandomCue(userCue,probability) {
+  const r = Math.random()
+  // if
+  if (r <= probability) {
+    return userCue
+  }
   const colorIndex = Math.floor(Math.random()*colorArray.length)
   const shapeIndex = Math.floor(Math.random()*shapeArray.length)
   const shape = shapeArray[shapeIndex]
